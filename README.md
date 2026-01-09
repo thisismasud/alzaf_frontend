@@ -37,7 +37,7 @@ A modern, responsive e-commerce frontend application built with Next.js 16 and R
 1. Clone the repository:
 
    ```bash
-   git clone <https://github.com/thisismasud/alzaf_frontend.git>
+   git clone https://github.com/thisismasud/alzaf_frontend.git
    cd alzaf_frontend
    ```
 
