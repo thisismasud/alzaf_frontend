@@ -65,10 +65,17 @@ A modern, responsive e-commerce frontend application built with Next.js 16 and R
 alzaf_frontend/
 ├── app/                # Next.js App Router pages and layouts
 │   ├── products/       # Product related pages
+│   │   ├── [id]/       # Product details pages
+│   │   │   ├── page.tsx # Product details page
+│   │       └── not-found.tsx # Product not found page
+│   │   
 │   └── page.tsx        # Home page
 ├── components/         # Reusable React components
 │   ├── home/           # Home page specific components
 │   ├── products/       # Product related components
+│   ├── layout/         # Layout components
+│   ├── productDetails/ # Product details components
+│   ├── common/         # Common components
 │   └── ui/             # Shared UI components
 ├── lib/                # Utility functions and data fetchers
 │   ├── config/         # Site configuration
