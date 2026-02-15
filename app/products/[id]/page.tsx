@@ -1,5 +1,7 @@
 import ProductDetails from "@/components/productDetails/ProductDetails";
 import { getSingleProduct } from "@/lib/data/singleProduct";
+import { notFound } from "next/navigation";
+
 
 const ProductDetailsPage = async ({
   params,
@@ -9,15 +11,13 @@ const ProductDetailsPage = async ({
   const { id } = await params;
   const result = await getSingleProduct(Number(id));
 
-  if (result.success) {
-    return <ProductDetails product={result.data.product} />;
-  } else {
-    return (
-      <div className="flex items-center justify-center min-h-[calc(100vh-200px)] text-2xl text-slate-800">
-        Product not found!
-      </div>
-    );
-  }
+//   if(!result.success){
+//      notFound()
+//   }
+
+  return (
+    <ProductDetails product={result.data.product} />
+  )
 };
 
 export default ProductDetailsPage;
